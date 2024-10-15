@@ -1,4 +1,4 @@
-# DA-CLIP
+# RA-CLIP
 
 This repository is based on the OpenAI's [CLIP](https://arxiv.org/abs/2212.07143) (Contrastive Language-Image Pre-training) and [open_clip](https://github.com/mlfoundations/open_clip). 
 
