@@ -1,4 +1,4 @@
-# FS-Diff
+# FS-Diff: Semantic Guidance and Clarity-Aware Simultaneous Multimodal Image Fusion and Super-Resolution
 <h2> <p align="center"> AVMS Dataset </p> </h2> 
 
 ---
