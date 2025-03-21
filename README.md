@@ -15,3 +15,8 @@ python infer.py -c [config file]
 # run the script
 python sr.py -p train -c [config file] -enable_wandb -log_eval
 ```
+---
+
+![AVMS](assets/03.pdf)
+
+---
