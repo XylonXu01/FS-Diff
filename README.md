@@ -20,7 +20,7 @@ The preview of our dataset is as follows.
 
 ### Details
 
-- **Sensor**: DJI M30T Drone, Its infrared camera operates within a spectral range of 8-14µm. The optical centers of the infrared and visible cameras are 3 cm apart.
+- **Sensor**: DJI M30T, Its infrared camera operates within a spectral range of 8-14µm. The optical centers of the infrared and visible cameras are 3 cm apart.
 
 
 - **Main scene**:
