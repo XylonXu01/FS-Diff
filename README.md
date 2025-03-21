@@ -1,53 +1,49 @@
 # FS-Diff: Semantic Guidance and Clarity-Aware Simultaneous Multimodal Image Fusion and Super-Resolution
-<h2> <p align="center"> AVMS Dataset </p> </h2> 
 
----
+<div align="center">
+  <h2>AVMS Dataset</h2>
+</div>
 
-![AVMS](assets/1.png)
+<div align="center">
+  <img src="assets/1.png" alt="AVMS" width="80%">
+</div>
 
----
+## 📊 Preview
 
+<div align="center">
+  <img src="assets/2.png" alt="preview" width="90%">
+</div>
 
+## 📋 Details
 
-### Preview
+### 📷 Sensor
+DJI M30T, Its infrared camera operates within a spectral range of 8-14µm. The optical centers of the infrared and visible cameras are 3 cm apart.
 
-The preview of our dataset is as follows. 
----
+### 📍 Main Scene
+- The aerial photography location is in Foshan, Guangdong, China.
 
-![preview](assets/2.png)
-
----
-
-### Details
-
-- **Sensor**: DJI M30T, Its infrared camera operates within a spectral range of 8-14µm. The optical centers of the infrared and visible cameras are 3 cm apart.
-
-
-- **Main scene**:
-    - The aerial photography location is in Foshan, Guangdong, China.
-
-- **Total number of image pairs**:
-    - **600** (for fusion, detection, segmentation)
-
-
+### 📁 Dataset Information
+- **Total number of image pairs**: **600** (for fusion, detection, segmentation)
 - **Format of images**: 
-   - [Infrared] 24-bit grayscale bitmap
-   - [Visible]  24-bit color bitmap
-
-- **Image size**: **512 x 512** pixels
-
+  - [Infrared] 24-bit grayscale bitmap
+  - [Visible] 24-bit color bitmap
+- **Image size**: **512 × 512** pixels
 - **Registration**: **All image pairs are registered.** 
 
-### Download
+## 📥 Download
 
-- [Google Drive]()
-- [Baidu Yun]()
+<div align="center">
 
-## Usage
-### Environment
+[![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)]()
+[![Baidu Yun](https://img.shields.io/badge/Baidu%20Yun-2932E1?style=for-the-badge&logo=baidu&logoColor=white)]()
+
+</div>
+
+## 🚀 Usage
+
+### Environment Setup
 ```python
 pip install -r requirement.txt
-```
 
 ### infer
 ```python
