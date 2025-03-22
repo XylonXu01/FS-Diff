@@ -44,6 +44,7 @@ DJI M30T, Its infrared camera operates within a spectral range of 8-14µm. The o
 ### Environment Setup
 ```python
 pip install -r requirement.txt
+```
 
 ### infer
 ```python
