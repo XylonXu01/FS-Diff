@@ -29,7 +29,7 @@ DJI M30T, Its infrared camera operates within a spectral range of 8-14µm. The o
   - [Visible] 24-bit color bitmap
 - **Image size**: **512 × 512** pixels
 - **Registration**: **All image pairs are registered.**
-- **Labeling**: **8891 segmentation and detection labels** have been manually labeled, containing 6 kinds of targets: **{car, person, bus,
+- **Labeling**: **8891 segmentation and detection labels** have been manually labeled, containing 7 kinds of targets: **{car, person, bus,
   truck, electric_bicycle, tent, boat}**. (Limited by manpower, some targets may be mismarked or missed. We would appreciate if you
   would point out wrong or missing labels to help us improve the dataset)
 
