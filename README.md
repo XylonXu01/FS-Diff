@@ -71,3 +71,18 @@ python infer.py -c [config file]
 # run the script
 python sr.py -p train -c [config file] -enable_wandb -log_eval
 ```
+
+## 🎓 Citation
+
+Please cite our paper:
+
+```bibtex
+@article{FS-Diff,
+  title={FS-Diff: Semantic guidance and clarity-aware simultaneous multimodal image fusion and super-resolution},
+  author={Jie, Yuchan and Xu, Yushen and Li, Xiaosong and Zhou, Fuqiang and Lv, Jianming and Li, Huafeng},
+  journal={Information Fusion},
+  pages={103146},
+  year={2025},
+  publisher={Elsevier}
+}
+```
