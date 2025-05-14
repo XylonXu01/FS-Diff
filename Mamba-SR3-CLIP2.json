@@ -1,0 +1,108 @@
+
+{
+    "name": "Mamba_SR3_CLIP",
+    "phase": "train", // train or val
+    "gpu_ids": [
+        1,2,3
+    ],
+    "path": { //set the path
+        "log": "logs",
+        "tb_logger": "tb_logger",
+        "results": "results",
+        "checkpoint": "checkpoint",
+        "resume_state": null
+        // "resume_state": "experiments/sr_ffhq_210806_204158/checkpoint/I640000_E37" //pretrain model or training state
+    },
+    "datasets": {
+        "train": {
+            "name": "fusion_dataset",
+            "mode": "HR", // whether need LR img
+            "dataroot":'', //dataset path
+            "datatype": "Fusion", //lmdb or img, path of img files
+            "l_resolution": , // low resolution need to super_resolution
+            "r_resolution": , // high resolution
+            "csv_file":"./SR_daclip_train.csv",
+            "batch_size": ,
+            "num_workers": 48,
+            "use_shuffle": true,
+            "data_len": -1, // -1 represents all data used in train
+            "clip_path": "./daclip_ViT-B-32_b784x1_lr2e-5_e50/checkpoints/epoch_30.pt" // whether use clip
+        },
+        "val": {
+            "name": "fusion_dataset",
+            "mode": "LRHR",
+            "dataroot": "./All_Fusion_Data_16_128",
+            "datatype": "Fusion", //lmdb or img, path of img files
+            "csv_file":"./SR_daclip_train.csv",
+            "l_resolution": 16,
+            "r_resolution": 128,
+            "data_len": 3, // data length in validation 
+            "clip_path": "./daclip_ViT-B-32_b784x1_lr2e-5_e50/checkpoints/epoch_30.pt" // whether use clip
+        }
+    },
+    "distortion": ["Clarity","blur"],
+    "model": {
+        "which_model_G": "sr3", // use the ddpm or sr3 network structure
+        "finetune_norm": false,
+        "unet": {
+            "in_channel": 9,
+            "out_channel": 3,
+            "inner_channel": 64,
+            "channel_multiplier": [
+                1,
+                2,
+                4,
+                8,
+                8
+            ],
+            "attn_res": [
+                16
+            ],
+            "res_blocks": 2,
+            "dropout": 0.2,
+            "context_dim":512,
+            "use_degra_context": true,
+            "use_image_context": true
+        },
+        "beta_schedule": { // use munual beta_schedule for acceleration
+            "train": {
+                "schedule": "linear",
+                "n_timestep": 4000,
+                "linear_start": 1e-6,
+                "linear_end": 1e-2
+            },
+            "val": {
+                "schedule": "linear",
+                "n_timestep": 4000,
+                "linear_start": 1e-6,
+                "linear_end": 1e-2
+            }
+        },
+        "diffusion": {
+            "image_size": 128,
+            "channels": 3, //sample channel
+            "conditional": true // unconditional generation or unconditional generation(super_resolution)
+        },
+        "daclip": {
+            "dalcip_path":"./daclip_ViT-B-32_b784x1_lr2e-5_e50/checkpoints/epoch_30.pt"
+        }
+    },
+    "train": {
+        "n_iter": 1000000,
+        "val_freq": 1e3,
+        "save_checkpoint_freq": 1e3,
+        "print_freq": 200,
+        "optimizer": {
+            "type": "adam",
+            "lr": 1e-4
+        },
+        "ema_scheduler": { // not used now
+            "step_start_ema": 5000,
+            "update_ema_every": 1,
+            "ema_decay": 0.9999
+        }
+    },
+    "wandb": {
+        "project": "Fusion_SR"
+    }
+}
