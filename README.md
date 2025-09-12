@@ -1,4 +1,6 @@
-# FS-Diff: Semantic Guidance and Clarity-Aware Simultaneous Multimodal Image Fusion and Super-Resolution
+# [INFFUS 25]FS-Diff: Semantic Guidance and Clarity-Aware Simultaneous Multimodal Image Fusion and Super-Resolution
+
+[![arxiv](https://img.shields.io/badge/Arxiv-2509.09427-red)](https://arxiv.org/abs/2509.09427) [![Elsevier](https://img.shields.io/badge/Elsevier-INFFUS-FF6C00)](https://www.sciencedirect.com/science/article/abs/pii/S1566253525002192?via%3Dihub)
 
 <div align="center">
   <h2>AVMS Dataset</h2>
